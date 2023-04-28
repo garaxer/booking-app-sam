@@ -98,6 +98,7 @@ To simplify troubleshooting, SAM CLI has a command called `sam logs`. `sam logs`
 
 ```bash
 gary-booking-sam-app$ sam logs -n HelloWorldFunction --stack-name gary-booking-sam-app --tail
+sam logs -n NestFunction --stack-name gary-booking-sam-app --tail --profile personal --region ap-southeast-2
 ```
 
 You can find more information and examples about filtering Lambda function logs in the [SAM CLI Documentation](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-logging.html).
@@ -131,6 +132,9 @@ Commands you can use next
 =========================
 [*] Create pipeline: cd gary-booking-sam-app && sam pipeline init --bootstrap
 [*] Validate SAM template: cd gary-booking-sam-app && sam validate
-[*] Test Function in the Cloud: cd gary-booking-sam-app && sam sync --stack-name {stack-name} --watch
+[*] Test Function in the Cloud: cd gary-booking-sam-app && sam sync --stack-name gary-booking-sam-app --watch
 
 stack-name = gary-booking-sam-app
+
+sam build
+sam deploy guided
