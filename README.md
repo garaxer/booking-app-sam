@@ -136,5 +136,8 @@ Commands you can use next
 
 stack-name = gary-booking-sam-app
 
+cd ../booking-app
+nest build
+cd ../
 sam build
 sam deploy guided

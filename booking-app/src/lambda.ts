@@ -2,9 +2,9 @@ import { NestFactory } from '@nestjs/core';
 import { ExpressAdapter } from '@nestjs/platform-express';
 import { AppModule } from './app.module';
 import express from 'express';
-import http from 'serverless-http';
 import { APIGatewayProxyEvent, Callback, Context, Handler } from 'aws-lambda';
-
+import http from 'serverless-http';
+// @vendia/serverless-express if http doesn't work
 let server: Handler;
 
 async function bootstrap(): Promise<Handler> {
